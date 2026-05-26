@@ -1,0 +1,261 @@
+--- Page 1 ---
+🏎
+Multimodal IRA
+Gemma 4 Multimodal Companion / 
+Roleplay Model Assignment
+Context
+Ira is a companion AI product, not a generic assistant. The goal is to build a
+strong Gemma multimodal-based companion / roleplay model that can approach 
+or
+exceed the current experience on a defined set of behaviors.
+You can assume:
+• full GPU access will be provided
+• you are allowed to run training jobs
+• multimodal support is expected
+Objective
+Take a Gemma multimodal base model and turn it into a high-quality companion /
+roleplay model for Ira using:
+• SFT
+• RL / preference optimization
+• good data design
+• strong evaluation
+• deployable inference
+The final output should not just be “a fine-tuned model.” It should be a model
+that feels:
+4/28/26, 12:47 AM Multimodal IRA
+https://rumikai.notion.site/Multimodal-IRA-33b3dd767db4800c9771e235795c4cc6 1/9
+--- Page 2 ---
+• warm
+• emotionally aware
+• consistent in character
+• good at roleplay
+• less like a generic assistant
+• suitable for real product testing
+A core requirement is strong multilingual behavior, especially for:
+• Hinglish
+• Latin-script Indic languages
+• code-switched conversations common in real messaging behavior
+Core Task
+Build a complete training + evaluation + inference pipeline for a Gemma-based
+companion model.
+Your work must include:
+• base model selection and justification
+• supervised fine-tuning
+• RL / preference optimization stage
+• roleplay / companion-specific evals
+• multilingual evaluation
+• deployable serving stack
+• final recommendation on readiness
+Scope
+The system should support:
+• multi-turn conversation
+• text input
+• image input
+• system / persona prompting
+• memory-context injection
+• controllable response style
+4/28/26, 12:47 AM Multimodal IRA
+https://rumikai.notion.site/Multimodal-IRA-33b3dd767db4800c9771e235795c4cc6 2/9
+--- Page 3 ---
+• API-based inference
+• multilingual conversation quality for Hinglish and Latin-script Indic use
+cases
+If you choose to support audio input too, explain the architecture clearly,
+but the core focus is companion / roleplay quality.
+Required Workstream 1: Model Strategy
+Choose the Gemma variant you believe is best suited for this use case.
+Your write-up must explain:
+• why this model was chosen
+• what tradeoffs you are making on quality, speed, and memory
+• whether you are using full fine-tuning, LoRA, QLoRA, or another approach
+• what multimodal capabilities are used in practice
+• how you expect the model to handle Hinglish and Latin-script Indic
+conversations
+Required Workstream 2: SFT
+Build an SFT pipeline that meaningfully improves companion behavior.
+This must include:
+• training data schema
+• data curation / filtering approach
+• train / validation split
+• reproducible configs
+• at least one strong SFT checkpoint
+• training logs and hyperparameters
+The SFT stage should improve:
+• tone
+• roleplay adherence
+• warmth
+• conversational naturalness
+• reduction of generic assistant language
+• multilingual fluency in Hinglish and Latin-script Indic chat
+4/28/26, 12:47 AM Multimodal IRA
+https://rumikai.notion.site/Multimodal-IRA-33b3dd767db4800c9771e235795c4cc6 3/9
+--- Page 4 ---
+Your data plan should explicitly address:
+• code-switching behavior
+• transliterated Indic text
+• informal messaging style
+• slang / mixed-language expression
+• multilingual emotional expression
+Required Workstream 3: RL / Preference Optimization
+After SFT, run an alignment stage focused on roleplay / companion quality.
+Acceptable approaches:
+• DPO
+• ORPO
+• PPO or another RL method, if justified clearly
+This stage should target:
+• emotional nuance
+• character consistency
+• memory-faithful behavior
+• reduced robotic phrasing
+• better response quality in ambiguous or emotionally loaded turns
+• better multilingual and code-switched conversational quality
+You should explain:
+• why you chose the method
+• what preference data you used
+• what changed from SFT to the aligned model
+• whether alignment improved or degraded multilingual behavior
+Required Workstream 4: Inference Service
+Build a runnable inference service for the final model.
+It must support:
+• persona / system prompt injection
+• memory-context injection
+4/28/26, 12:47 AM Multimodal IRA
+https://rumikai.notion.site/Multimodal-IRA-33b3dd767db4800c9771e235795c4cc6 4/9
+--- Page 5 ---
+• multi-turn chat
+• configurable decoding parameters
+• structured logs for latency, throughput, and GPU memory
+Provide:
+• setup instructions
+• run instructions
+• example requests
+• notes on deployment assumptions
+The service should be able to handle:
+• English
+• Hinglish
+• Latin-script Indic inputs
+• mixed-language chat turns
+Required Workstream 5: Evaluation
+Build a companion / roleplay-specific evaluation suite.
+The evals must cover:
+• emotional sensitivity
+• warmth / naturalness
+• roleplay consistency
+• memory faithfulness
+• multimodal grounding
+• playfulness / banter
+• safety / boundaries
+• recovery from ambiguous messages
+• multilingual fluency
+• code-switching quality
+• transliterated Indic robustness
+Example scenarios:
+• “Iʼm fine” when the user is clearly not fine
+• callback to an earlier personal detail
+4/28/26, 12:47 AM Multimodal IRA
+https://rumikai.notion.site/Multimodal-IRA-33b3dd767db4800c9771e235795c4cc6 5/9
+--- Page 6 ---
+• image-sharing with a personal response
+• playful banter without generic assistant tone
+• emotionally dependent user behavior requiring warmth plus boundaries
+• staying in-character over long conversations
+• Hinglish chat that switches naturally between English and Hindi
+• Latin-script Indic input with spelling variation and informal phrasing
+• mixed-language emotional support conversations
+• code-switched flirt / banter / comfort / casual chat
+You should compare:
+• base Gemma
+• SFT Gemma
+• RL / preference-tuned Gemma
+If useful, include comparison against the current Gemini behavior.
+Multilingual Requirement
+This project must explicitly optimize for multilingual companion behavior.
+At minimum, evaluate and improve for:
+• English
+• Hinglish
+• Latin-script Hindi
+• other Latin-script Indic variants if relevant to your approach
+We care about:
+• natural code-switching
+• non-awkward transliterated responses
+• correct tone in mixed-language chat
+• informal messaging fluency
+• emotional nuance across language mixing
+• avoiding sterile or over-formal phrasing
+The model should not simply “understand” these inputs. It should respond in a
+way that feels native to real user chat behavior.
+4/28/26, 12:47 AM Multimodal IRA
+https://rumikai.notion.site/Multimodal-IRA-33b3dd767db4800c9771e235795c4cc6 6/9
+--- Page 7 ---
+Deliverables
+Please submit:
+•
+R E A D M E .m d
+• serve/
+• training/
+• preference/
+• evals/
+• results/
+• final_report.md
+final_report.md must answer
+• what model you chose and why
+• what data you used
+• how multilingual data was handled
+• what SFT improved
+• what RL / preference optimization improved
+• where the model still fails
+• whether the model is ready for:
+• narrow deployment
+• hybrid routing
+• broader rollout
+• what the next highest-leverage improvement is
+Success Criteria
+Minimum success:
+• reproducible setup
+• one meaningful SFT checkpoint
+• one meaningful RL / preference-tuned checkpoint
+• evaluation suite that reflects the actual product problem
+• explicit multilingual evaluation
+• honest analysis of failure modes
+4/28/26, 12:47 AM Multimodal IRA
+https://rumikai.notion.site/Multimodal-IRA-33b3dd767db4800c9771e235795c4cc6 7/9
+--- Page 8 ---
+Strong success:
+• clear gains from base -> SFT -> aligned model
+• meaningful improvement in tone, warmth, and roleplay quality
+• reduced generic assistant behavior
+• strong multilingual behavior in Hinglish and Latin-script Indic chat
+• model is good enough for internal product testing
+Exceptional success:
+• model is strong enough for a real slice of traffic
+• quality is high enough that deployment is a realistic next step
+• multilingual/code-switched behavior feels natural and product-ready
+• recommendation is grounded in evidence, not optimism
+Non-Goals
+Do not:
+• optimize mostly for generic benchmarks
+• confuse long context with memory
+• overfocus on infra while under-solving behavior quality
+• claim success based on vague qualitative impressions
+• skip failure analysis
+• stop at SFT if the model still feels generic
+• ignore multilingual quality while optimizing English-only performance
+What Matters Most
+We care most about:
+• quality of data judgment
+• quality of eval design
+• ability to shape model behavior
+• multilingual and code-switched fluency
+• ability to make the model feel human without becoming messy
+• ability to preserve warmth, consistency, and boundaries together
+• ability to make a clear product recommendation at the end
+4/28/26, 12:47 AM Multimodal IRA
+https://rumikai.notion.site/Multimodal-IRA-33b3dd767db4800c9771e235795c4cc6 8/9
+--- Page 9 ---
+Final Decision Output
+Your final recommendation must end with one of:
+• ready for narrow deployment
+• ready for hybrid routing
+• not ready yet
+4/28/26, 12:47 AM Multimodal IRA
+https://rumikai.notion.site/Multimodal-IRA-33b3dd767db4800c9771e235795c4cc6 9/9
