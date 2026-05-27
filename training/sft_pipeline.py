@@ -246,7 +246,7 @@ def add(store: list, messages, inject_persona=True) -> bool:
     volumes={DATA_DIR: volume},
     secrets=[
         Secret.from_name("wandb-secret"),
-        Secret.from_dict({"HF_TOKEN": "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"}),
+        Secret.from_name("huggingface-secret"),
     ],
 )
 def run_sft():

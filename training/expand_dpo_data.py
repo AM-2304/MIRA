@@ -4,7 +4,7 @@ import time
 from groq import Groq
 
 # Initialize Groq
-client = Groq(api_key="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")
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 OUTPUT_FILE = "generated_data/ira_dpo_pairs_expanded.jsonl"
 BASE_FILE = "generated_data/ira_dpo_pairs_v2.jsonl"

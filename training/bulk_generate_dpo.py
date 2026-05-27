@@ -7,7 +7,7 @@ from pathlib import Path
 from groq import Groq
 
 # Initialize Groq
-API_KEY = "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"
+API_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=API_KEY)
 
 OUTPUT_FILE = Path("generated_data/ira_dpo_pairs_massive.jsonl")

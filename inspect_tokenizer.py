@@ -12,7 +12,7 @@ image = (
 @app.function(
     image=image,
     volumes={"/data": volume},
-    secrets=[modal.Secret.from_dict({"HF_TOKEN": "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"})]
+    secrets=[modal.Secret.from_name("huggingface-secret")]
 )
 def inspect_tok():
     from transformers import AutoTokenizer
